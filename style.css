@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(9,139,113);
+    background: linear-gradient(90deg, rgba(9,139,113,1) 0%, rgba(47,189,121,1) 35%, rgba(149,213,193,1) 100%);
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat';
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    height: 100vh;
+}
+
+.game-heading {
+    font-family: 'Playwrite CU', cursive;
+    font-weight: 900;
+    font-size: 42px;
+    color: white;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.mid {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.heading {
+    font-family: 'Montserrat';
+    color: #ffffff;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 100px);
+    gap: 5px;
+}
+
+.row {
+    display: flex;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+}
+
+.card:hover {
+    cursor: pointer;
+    background-color: #92efc2c8;
+}
+
+.question-sign {
+    opacity: 0;
+    color: #428d81c8;
+}
+
+.card__img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    display: none;
+}
+
+.score-container {
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    width: 100%;
+}
+
+.player-score {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.first-player {
+    flex: 1;
+    border-right: 2px solid #FFFFFF;
+}
+
+.second-player {
+    flex: 1;
+    flex-direction: row-reverse;
+}
+
+.player-img {
+    height: 100px;
+    width: 100px;
+    background-size: contain;
+    background-position: center;
+    border: 2px solid #FFFFFF;
+    border-radius: 50%;
+}
+
+.score {
+    font-weight: bold;
+    font-size: 32px;
+    color: #FFFFFF;
+}
+
+.button-wrapper {
+    width: 100%;
+    display: none;
+}
+
+.try-again-btn {
+    width: 50%;
+    height: 40px;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 16px;
+    color: #428d81c8;
+}
+
+.try-again-btn:hover {
+    cursor: pointer;
+}
+
+.align-items-center {
+    display: flex;
+}
