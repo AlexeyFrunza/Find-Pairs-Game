@@ -4,7 +4,7 @@ let timeOutRunning;
 
 function getRandomIndexes() {
     indexes = [];
-    
+
     while (indexes.length < 16) {
         let random = Math.floor((Math.random() * 8) + 1);
         if (indexes.indexOf(random) != indexes.lastIndexOf(random)) {
@@ -84,9 +84,6 @@ document.addEventListener('DOMContentLoaded', () => {
         updateScore(1, secondPlayerScore)
 
         winner.textContent = ''
-
-        console.log(openedCards)
-        console.log(activeCards)
     }
 
     function getWinner() {
