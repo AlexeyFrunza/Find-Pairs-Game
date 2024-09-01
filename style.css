@@ -3,6 +3,7 @@
 }
 
 body {
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -15,16 +16,17 @@ body {
 
 .container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     width: 90%;
-    height: 100vh;
+    height: 100%;
 }
 
 .game-heading {
     font-family: 'Playwrite CU', cursive;
     font-weight: 900;
     font-size: 42px;
+    margin: 0;
     color: white;
 }
 
@@ -53,6 +55,7 @@ body {
 .heading {
     font-family: 'Montserrat';
     color: #ffffff;
+    margin: 0;
 }
 
 .cards {
@@ -154,4 +157,48 @@ body {
 
 .align-items-center {
     display: flex;
+}
+
+@media(max-width: 1000px) {
+    .container {
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .game-heading {
+        font-size: 24px;
+    }
+    .mid {
+        justify-content: space-around;
+    }
+    .right {
+        display: none;
+    }
+    .left {
+        margin-top: 5%;
+        flex-direction: row;
+    }
+    .rays {
+        transform:matrix(-0.00,-1.00,1.00,0.00,0,0);
+        width: 32px;
+    }
+    .left-heading::after {
+        content: ' PAIRS'
+    }
+}
+
+@media(max-width: 500px) {
+    .cards {
+        grid-template-columns: repeat(4, 80px);
+        grid-template-rows: repeat(4, 80px);
+        gap: 5px;
+    }
+    .card {
+        width: 80px;
+        height: 80px;
+    }
+    .card__img {
+        width: 80px;
+        height: 80px;
+    }
 }
